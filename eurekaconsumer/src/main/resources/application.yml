@@ -1,0 +1,40 @@
+server:
+  port: 9001
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-7901:7901/eureka/
+    instance:
+      hostname: localhost
+      instance-id: eureka-consumer
+#    register-with-eureka: false  # 启动时报错com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+
+
+#eureka:
+#  #  server:
+#  #    enable-self-preservation: false       #关闭保护机制
+#  #    eviction-interval-timer-in-ms: 2000   #剔除失效服务间隔,单位毫秒
+#  client:
+#    #设置服务注册中心的URL
+#    service-url:
+#      defaultZone: http://eureka-7901:7901/eureka/
+#  instance:
+#    hostname: localhost
+#    instance-id: eureka-consumer
+
+
+spring:
+  application:
+    name: eureka-consumer
+
+logging:
+  level:
+    org.springframework: DEBUG
+
+#ribbon:
+#  eureka:
+#    enable: true
+
+
